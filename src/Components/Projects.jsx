@@ -69,50 +69,54 @@ const Projects = () => {
       {/* Modal for Project Details */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full p-5 md:p-8">
-            <h2 className="text-2xl font-bold text-gray-800">{selectedProject.name}</h2>
-            <img
-              src={selectedProject.image}
-              alt={selectedProject.name}
-              className="h-60 w-full object-cover rounded-lg mt-4"
-            />
-            <p className="text-gray-700 mt-4">{selectedProject.description}</p>
-            <h3 className="text-lg font-semibold mt-6">Main Technology Stack:</h3>
-            <ul className="list-disc ml-5 text-gray-700">
-              {selectedProject.stack.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mt-6">Challenges:</h3>
-            <p className="text-gray-700">{selectedProject.challenges}</p>
-            <h3 className="text-lg font-semibold mt-6">Improvements:</h3>
-            <p className="text-gray-700">{selectedProject.improvements}</p>
-            <div className="flex flex-wrap justify-between mt-6 gap-4">
-              <a
-                href={selectedProject.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto btn bg-orange-500 text-white px-4 py-2 rounded"
-              >
-                Live Site
-              </a>
-              <a
-                href={selectedProject.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto btn bg-gray-800 text-white px-4 py-2 rounded"
-              >
-                GitHub Repo
-              </a>
-            </div>
+        <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full p-5 md:p-8">
+          <h2 className="text-2xl font-bold text-gray-800">{selectedProject.name}</h2>
+          <img
+            src={selectedProject.image}
+            alt={selectedProject.name}
+            className="h-60 w-full object-cover rounded-lg mt-4"
+          />
+          <p className="text-gray-700 mt-4">{selectedProject.description}</p>
+          <h3 className="text-lg font-semibold mt-6">Main Technology Stack:</h3>
+          <ul className="list-disc ml-5 text-gray-700">
+            {selectedProject.stack.map((tech, index) => (
+              <li key={index}>{tech}</li>
+            ))}
+          </ul>
+          <h3 className="text-lg font-semibold mt-6">Challenges:</h3>
+          <p className="text-gray-700">{selectedProject.challenges}</p>
+          <h3 className="text-lg font-semibold mt-6">Improvements:</h3>
+          <p className="text-gray-700">{selectedProject.improvements}</p>
+          <div className="flex flex-wrap justify-between mt-6 gap-4">
+            <a
+              href={selectedProject.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto btn bg-orange-500 text-white px-4 py-2 rounded"
+            >
+              Live Site
+            </a>
+            <a
+              href={selectedProject.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto btn bg-gray-800 text-white px-4 py-2 rounded"
+            >
+              GitHub Repo
+            </a>
+          </div>
+          {/* Close Button */}
+          <div className="flex justify-center mt-6">
             <button
-              className="w-full sm:w-auto btn bg-red-500 text-white mt-6 px-4 py-2 rounded"
+              className="w-full sm:w-auto btn bg-red-500 text-white px-4 py-2 rounded"
               onClick={() => setSelectedProject(null)}
             >
               Close
             </button>
           </div>
         </div>
+      </div>
+      
       )}
     </div>
   );

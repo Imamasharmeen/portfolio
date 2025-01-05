@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaDatabase, FaCode } from 'react-icons/fa';
 
 const Skills = () => {
@@ -46,13 +46,12 @@ const Skills = () => {
         </p>
       </div>
 
-      <div className="flex justify-center gap-5">
+      {/* Grid Layout for Skills */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((category, index) => (
           <div
             key={index}
-            className={`card w-72 bg-[#FFF3EA] p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl cursor-pointer ${
-              currentPage === index ? "scale-105 shadow-xl" : "scale-100"
-            }`}
+            className={`card w-full bg-[#FFF3EA] p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:shadow-xl cursor-pointer ${currentPage === index ? "scale-105 shadow-xl" : "scale-100"}`}
             onClick={() => handlePagination(index)}
           >
             <h3 className="text-xl font-semibold text-gray-800 mb-4">{category.category}</h3>
@@ -76,9 +75,7 @@ const Skills = () => {
         {skills.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 mx-1 rounded-full ${
-              currentPage === index ? "bg-orange-500" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 mx-1 rounded-full ${currentPage === index ? "bg-orange-500" : "bg-gray-300"}`}
             onClick={() => handlePagination(index)}
           />
         ))}
