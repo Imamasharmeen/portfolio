@@ -1,15 +1,15 @@
-import React from "react";
+
 
 const Education = () => {
   const educationData = [
     {
       degree: "Bachelor of Science in Information and communication technology",
       institution: "Omnia, Espoon seudun koulutuskuntayhtymä ",
-      year: "2022 - 2025",
+      year: "2022 - Present",
       details: "Completed some course with a focus on software engineering, My SQL and web development.",
     },
     {
-      degree: "Bachelor of Science in Electrical and Electronics Engineer",
+      degree: "Bachelor of Science in Electrical and Electronics Engineering",
       institution: "University of Information Technology and Sciences",
       year: "2013 - 2017",
       details: "Completed with major subjects including Communication Theory and Lab, Wireless and satellite communication, Telecommunication engineering, Signal and system.",
